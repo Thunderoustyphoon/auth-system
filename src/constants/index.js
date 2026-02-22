@@ -6,18 +6,18 @@ import { object } from "webidl-conversions"
 export const DB_NAME = "Auth SYS"
 
 //lets make user roles for future puposes
-export const UserRoles = object.freeze({
+export const UserRoles = Object.freeze({
     USER: "user",
     ADMIN: "admin"
 })
 
 // for Oauth providers for now google only
-export const oAuthProviders = object.freeze({
+export const oAuthProviders = Object.freeze({
     GOOGLE: "google"
 })
 
 // for expiring tokens
-export const TokenExpiry = object.freeze({
+export const TokenExpiry = Object.freeze({
     ACCESS: 15 * 60 * 1000, // 15 minutes
     REFRESH: 7 * 24 * 60 * 1000 // 7 day for now 
 })
