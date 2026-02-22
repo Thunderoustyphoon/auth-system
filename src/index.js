@@ -1,13 +1,4 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// src/index.js
-//
-// Chai aur Code's entry point pattern:
-//   1. Load .env
-//   2. Connect to DB (async)
-//   3. THEN start the HTTP server
-//
-// If DB fails → process exits. Server only runs when DB is ready.
-// ─────────────────────────────────────────────────────────────────────────────
+
 import "dotenv/config"; // Load .env first — everything else depends on it
 import connectDB from "./db/index.js";
 import { app } from "./app.js";
