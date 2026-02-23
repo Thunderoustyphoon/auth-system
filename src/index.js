@@ -9,15 +9,15 @@ connectDB()
   .then(() => {
     // ── Start server only after DB is connected ───────────────────────────
     const server = app.listen(PORT, () => {
-      console.log(`⚙️  Server running on http://localhost:${PORT}`);
-      console.log(`🌍 Environment: ${process.env.NODE_ENV}`);
-      console.log(`📖 API Base:    http://localhost:${PORT}/api/v1`);
+      console.log(`  Server running on http://localhost:${PORT}`);
+      console.log(` Environment: ${process.env.NODE_ENV}`);
+      console.log(` API Base:    http://localhost:${PORT}/api/v1`);
     });
 
     // ── Graceful shutdown ─────────────────────────────────────────────────
     // If something unhandled goes wrong after startup, log it and shut down cleanly
     process.on("unhandledRejection", (reason, promise) => {
-      console.error("🔴 Unhandled Rejection at:", promise, "reason:", reason);
+      console.error(" Unhandled Rejection at:", promise, "reason:", reason);
       server.close(() => {
         console.log("Server closed due to unhandled rejection.");
         process.exit(1);
@@ -25,7 +25,7 @@ connectDB()
     });
 
     process.on("uncaughtException", (err) => {
-      console.error("🔴 Uncaught Exception:", err.message);
+      console.error(" Uncaught Exception:", err.message);
       server.close(() => {
         console.log("Server closed due to uncaught exception.");
         process.exit(1);

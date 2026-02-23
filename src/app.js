@@ -45,6 +45,13 @@ app.use(cookieParser());
 // Must come AFTER body parsing so req.body is populated.
 app.use(mongoSanitize());
 
+// ── OAuth ─────────────────────────────────────────────────────────────────────
+app.use(passport.initialize());
+
+// ── Routes ───────────────────────────────────────────────────────────────────
+app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/user", userRouter);
+
 // ── Health Check ─────────────────────────────────────────────────────────────
 app.get("/healthcheck", (_req, res) => {
   res.status(200).json({
