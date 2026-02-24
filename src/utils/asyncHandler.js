@@ -8,3 +8,4 @@ const asyncHandler = (fn) => async (req, res, next) => {
     next(error); // sends to global error.middleware.js
   }
 };
+export { asyncHandler };

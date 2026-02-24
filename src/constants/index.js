@@ -12,7 +12,7 @@ export const UserRoles = Object.freeze({
 })
 
 // for Oauth providers for now google only
-export const oAuthProviders = Object.freeze({
+export const OAuthProviders = Object.freeze({
     GOOGLE: "google"
 })
 

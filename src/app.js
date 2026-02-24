@@ -4,6 +4,17 @@ import cookieParser from "cookie-parser";
 import helmet from "helmet";
 import mongoSanitize from "express-mongo-sanitize";
 import morgan from "morgan";
+import passport from "passport"
+
+// Routes
+import authRouter from "./routes/auth.routes.js";
+import userRouter from "./routes/user.routes.js";
+
+// Middlewares
+import { errorHandler } from "./middlewares/error.middleware.js";
+
+// Passport OAuth strategies 
+import "./config/passport.js";
 
 const app = express();
 
