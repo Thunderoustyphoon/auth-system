@@ -79,7 +79,7 @@ const errorHandler = (err, req, res, next) => {
 
   // Dev logging — morgan handles prod logging
   if (process.env.NODE_ENV === "development") {
-    console.error(`\n🔴 [${req.method}] ${req.originalUrl} → ${error.statusCode}`);
+    console.error(`\n [${req.method}] ${req.originalUrl} → ${error.statusCode}`);
     console.error(err.stack || err.message);
   }
 

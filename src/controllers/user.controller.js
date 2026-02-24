@@ -169,7 +169,7 @@ const deleteAccount = asyncHandler(async (req, res) => {
   clearRefreshTokenCookie(res);
 
   return res.status(HttpStatus.OK).json(
-    new ApiResponse(HttpStatus.OK, null, "Account permanently deleted. Goodbye! 👋")
+    new ApiResponse(HttpStatus.OK, null, "Account permanently deleted. Goodbye! ")
   );
 });
 
